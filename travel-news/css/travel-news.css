@@ -1,0 +1,26 @@
+
+
+
+a{
+	color: #000;
+	text-decoration: none;
+}
+
+
+.logo{
+	margin: auto;
+	display: block;
+}
+
+.hero{
+	width: 100%;
+	display: block;
+
+}
+
+ul{
+	list-style-type: none;
+	margin:0;
+	padding: 0;
+}
+
