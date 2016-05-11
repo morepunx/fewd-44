@@ -1,0 +1,67 @@
+/* Reset */
+/* ------------------------ */
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+p {
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+
+
+/* Layout */
+/* ------------------------ */
+body{
+	background-color: #444444; 
+	color:#ffffff;
+}
+
+header{
+	text-align: center;
+}
+
+.title {
+	font-size: 36px;
+}
+
+li{
+	display: inline;
+}
+
+a{
+	color:#1FD8A1;
+}
+
+img{
+	float: right;
+}
+
+/* Headings */
+/* ------------------------ */
+
+
+
+/* Navigation Lists */
+/* ------------------------ */
+
+
+
+/* Links */
+/* ------------------------ */
+
+
+
+/* About Me page */
+/* ------------------------ */
+
+
+
+/* Resume page */
+/* ------------------------ */
+
+
+
+/* Resume page - Experience */
+/* ------------------------ */
