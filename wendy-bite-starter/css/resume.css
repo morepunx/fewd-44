@@ -16,36 +16,38 @@ p {
 body{
 	background-color: #444444; 
 	color:#ffffff;
+	border: 5px solid #878787;
+	padding: 50px;
+	margin: 30px;l
 }
 
-header{
-	text-align: center;
-}
 
-.title {
-	font-size: 36px;
-}
 
-li{
-	display: inline;
-}
 
-a{
-	color:#1FD8A1;
-}
 
-img{
-	float: right;
-}
 
 /* Headings */
 /* ------------------------ */
+h1, li{
+		font-family: Arial;
+}
 
+h1 {
+	margin-bottom: 20px;
+}
 
 
 /* Navigation Lists */
 /* ------------------------ */
 
+li{
+	display: inline;
+	font-weight: bold; 
+}
+
+a{
+	color:#1FD8A1;
+}
 
 
 /* Links */
@@ -55,7 +57,37 @@ img{
 
 /* About Me page */
 /* ------------------------ */
+header{
+	text-align: center;
+}
 
+.title {
+	font-size: 36px;
+	font-style: italic;
+}
+
+img{
+	float: right;
+	padding: 5px;
+	border: 1px solid #878787;
+	margin-right: 20px; 
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+
+main {
+	border-top: 1px solid #878787;
+	border-bottom: 1px solid #878787;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+footer{
+	text-align: center;
+}
 
 
 /* Resume page */
