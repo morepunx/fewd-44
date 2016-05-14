@@ -1,3 +1,9 @@
+*{
+	box-sizing: border-box;
+}
+
+
+
 /* Layout */
 /* ------------------------ */
 body{
@@ -20,7 +26,7 @@ body{
 
 header {
 		border-bottom: solid 1px #999;
-		padding: 15px;
+		padding: 15px 5px; 
 }
 
 
@@ -49,10 +55,38 @@ a {
 /* ------------------------ */
 
 main {
+	margin: 30px;
+	overflow: hidden;
 
-	margin-top: 20px;
-	margin-left: 40px;
-	margin-right: 40px;
+}
+
+ul {
+	margin-top: 5px;
+}
+
+li {
+	list-style: square;
+}
+
+.role-format {
+	color: #000;
+	font-size: 12px;
+	font-weight: lighter;
+	text-transform: uppercase;
+}
+
+.date-format {
+	color: #000;
+	font-size: 12px;
+	font-weight: lighter;
+	text-transform: uppercase;
+
+}
+
+.experience {
+	display: inline;
+	float: left;
+	width: 66.666666%;
 }
 
 .experience ul{
@@ -61,6 +95,8 @@ main {
 
 h1 {
 	font-size: 24px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 
@@ -77,15 +113,37 @@ h3 {
 	margin-bottom: 0px
 }
 
-main p{
-	margin-top: 0px;
-	margin-bottom: 0px;
+.skills {
+	float:left;
+	overflow: hidden;
+	margin-left: 40px;
 }
 
-.contact li{
+.education {
+	overflow: hidden;
+	width: 100%;
+}
+
+.education ul{
+	padding-left: 10px;
+}
+
+.education li{
+	list-style: none;
+}
+
+footer {
+		border-top: solid 1px #999;
+}
+
+.social-links {
+			text-align: center;
+			margin-top: 30px;
+}
+
+.social-links li{
+	display: inline;
 	list-style: none;
 	margin: auto;
-	text-align: center;
+
 }
-
-

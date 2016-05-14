@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>layout intro</title>
+</head>
+<body>
+<h1>Layout intro</h1>
+
+<h2>Table layout</h2>
+<table>
+	<tr>
+		<td>column 1</td>
+		<td>column 2</td>
+		<td>column 3</td>
+	</tr>	
+</table>
+
+<h2>Float layout</h2>
+<header>
+	<div>column 1</div>
+	<div>column 2</div>
+	<div>column 3</div>
+</header>
+
+<h2>Full width three column float</h2>
+<header class="three-columns">
+	<div>column 1</div>
+	<div>column 2</div>
+	<div>column 3</div>
+</header>
+
+<h2>Flexbox</h2>
+
+<main>
+	<section>column 1</section>
+	<section>column 2</section>
+	<section>column 3</section>
+</main>
+
+<h2>Full width three column flexbox</h2>
+<main class="three-columns">
+	<section>column 1</section>
+	<section>column 2</section>
+	<section>column 3</section>
+</main>
+
+<h2>flexbox with sidebar</h2>
+<main>
+	<section class="sidebar">sidebar</section>
+	<section class="column">column 1</section>
+	<section class="main">main</section>
+	<section class="column">column 3</section>
+</main>
+
+<h2>Absolute positioning</h2>
+<footer>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua.</p>
+</footer>
+
+
+<style>
+/*Reset*/
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+
+/*Table layout*/
+
+
+td {
+	background: green;
+	padding: 10px;
+	color: #fff;
+}
+
+
+/*Float layout*/
+header {
+	overflow: hidden;
+}
+
+header div {
+	float: left;
+	background-color: gray;
+	color: #fff;
+	padding:10px;
+}
+
+/*Three column float*/
+
+.three-columns section, .three-columns div {
+	width: 33.333333%;
+}
+
+
+
+/*Flex layout*/
+main {
+	display: flex;
+}
+
+
+section {
+	background-color: rosybrown;
+	color: navajowhite;
+	padding: 10px;
+
+}
+
+
+/*flexbox three-column*/
+.three-columns {
+	flex: 1;
+}
+
+/*Absolute positioning */
+footer {
+	background: linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	height:200px;
+	width:100%;
+	position: relative;
+}
+
+footer p{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	bottom: 40px;
+	left: 200px;
+}
+
+/*Sidebar flexbox*/
+
+.sidebar {
+	width: 200px;
+	background-color: darksalmon;
+}
+
+.main {
+	flex: 2;
+	background-color: black;
+}
+
+.column {
+	flex:1;
+}
+
+</style>
+
+</body>
+</html>
