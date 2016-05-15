@@ -45,9 +45,9 @@ header li{
 
 a {
 	font-weight: bolder;
-	margin-left: 20px;
-	color: #9013FE;
+	color: #C9697E;
 	text-decoration: none;
+	margin-left: 20px;
 }
 
 
@@ -113,6 +113,8 @@ h3 {
 	margin-bottom: 0px
 }
 
+
+
 .skills {
 	float:left;
 	overflow: hidden;
@@ -146,4 +148,16 @@ footer {
 	list-style: none;
 	margin: auto;
 
+}
+
+img {
+	float: right; 
+	overflow: hidden;
+	border: solid 1px #999;
+	padding: 5px;
+	margin-left: 10px;
+}
+
+p {
+	overflow: hidden;
 }
