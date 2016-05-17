@@ -1,5 +1,6 @@
 *{
 	box-sizing: border-box;
+	margin: 0px;
 }
 
 
@@ -7,8 +8,8 @@
 /* Layout */
 /* ------------------------ */
 body{
-	background-color: #FFF; 
-	font-family: Arial; 
+	background-color: #FFEF00; 
+	font-family: Helvetica; 
 
 }
 
@@ -18,48 +19,140 @@ body{
 .title {
 	font-size: 32px;
 	display: inline;
-	margin-right: 10px;
-	margin-left: 25px;
-	font-weight: lighter;
-
+	font-weight: bolder;
+	color: #000;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-transform: uppercase;
 }
 
+
+
 header {
-		border-bottom: solid 1px #999;
-		padding: 15px 5px; 
+		border-bottom: solid 3px #000000;
+		padding-bottom: 20px;
+		margin: 20px 40px;
 }
 
 
 
 /* Navigation */
 /* ------------------------ */
-
-header ul{
-	display: inline;
-	padding-left: 10px;
+.navigation {
+	border-bottom: solid 3px #000000;
+	padding-bottom: 20px;
+	margin: 20px 40px;
 }
 
-header li{
+
+.navigation ul{
+	display: inline;
+	margin-left: -40px;
+}
+
+.navigation li{
 	display: inline;
 }
 
 a {
 	font-weight: bolder;
-	color: #C9697E;
+	color: #000;
+	font-size: 20px;
 	text-decoration: none;
-	margin-left: 20px;
+	margin-right: 20px;	
+}
+
+/*Headers*/
+h1 {
+	font-size: 24px;
+	margin-top: 0px;
 }
 
 
-/* Main */
+h2 {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #000;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border-bottom: solid 1px #000000;
+}
+
+h3 {
+	font-size: 16px;
+	margin-top: 20px
+}
+
+
+
+/* formatting for about me  */
 /* ------------------------ */
-
-main {
-	margin: 30px;
+.aboutme-content {
+	margin: 20px 40px;
 	overflow: hidden;
-
 }
 
+.aboutme-content h1 {
+	margin-bottom: 20px;
+}
+
+.aboutme-content ul {
+	margin-top: 5px;
+}
+
+.aboutme-content p {
+	margin-top: 20px;
+} 
+
+img {
+	float: right; 
+	overflow: hidden;
+	border: solid 3px #000;
+	margin-left: 40px;
+}
+
+
+/*resume layout*/
+
+.resume-title {
+	margin-left: 40px;
+}
+
+.resume-content {
+	margin: 0px 40px;	
+	display: flex;
+}
+
+.experience {
+	flex:1;
+}
+
+
+.experience ul{
+ 	padding-left: 20px;
+}
+
+
+.education {
+	margin-left: 40px;
+	flex: 1;
+}
+
+.education ul{
+	padding-left: 10px;
+}
+
+.education li{
+	list-style: none;
+	flex:1;
+}
+
+.skills {
+	margin-left: 40px;
+}
+
+
+/*Resume styling*/
 ul {
 	margin-top: 5px;
 }
@@ -83,59 +176,11 @@ li {
 
 }
 
-.experience {
-	display: inline;
-	float: left;
-	width: 66.666666%;
-}
-
-.experience ul{
- 	padding-left: 20px;
-}
-
-h1 {
-	font-size: 24px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-}
-
-
-h2 {
-	font-size: 16px;
-	text-transform: uppercase;
-	color: #999;
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
-h3 {
-	font-size: 16px;
-	margin-bottom: 0px
-}
-
-
-
-.skills {
-	float:left;
-	overflow: hidden;
-	margin-left: 40px;
-}
-
-.education {
-	overflow: hidden;
-	width: 100%;
-}
-
-.education ul{
-	padding-left: 10px;
-}
-
-.education li{
-	list-style: none;
-}
-
+/*footer*/
 footer {
-		border-top: solid 1px #999;
+	border-top: solid 3px #000;
+	padding-bottom: 20px;
+	margin: 40px 40px;
 }
 
 .social-links {
@@ -150,14 +195,5 @@ footer {
 
 }
 
-img {
-	float: right; 
-	overflow: hidden;
-	border: solid 1px #999;
-	padding: 5px;
-	margin-left: 10px;
-}
 
-p {
-	overflow: hidden;
-}
+
