@@ -87,9 +87,14 @@ h3 {
 
 /* formatting for about me  */
 /* ------------------------ */
+.aboutme-title {
+	margin-left: 40px;
+}
+
 .aboutme-content {
 	margin: 20px 40px;
 	overflow: hidden;
+	display: flex;
 }
 
 .aboutme-content h1 {
@@ -99,6 +104,11 @@ h3 {
 
 .aboutme-content ul {
 	margin-top: 5px;
+	padding-left: 20px;
+}
+
+.aboutme-content li {
+	padding-left: 0px;
 }
 
 .aboutme-content p {
@@ -106,20 +116,24 @@ h3 {
 } 
 
 img {
-	float: right; 
-	overflow: hidden;
 	border: solid 3px #000;
-	margin-left: 40px;
+	width: 100%;
+	flex: 1;
 }
 
 .workstuff {
-	overflow: hidden;
+	flex: 1;
 }
 
 .funstuff {
-	overflow: hidden;
+	flex: 1;
+	margin-left: 40px;
 }
 
+.profile-image {
+	flex: 1;
+	margin-left: 40px;
+}
 
 /*resume layout*/
 
@@ -133,7 +147,7 @@ img {
 }
 
 .experience {
-	flex:3;
+	flex:1;
 }
 
 
@@ -144,7 +158,7 @@ img {
 
 .education {
 	margin-left: 40px;
-	flex: 2;
+	flex: 1;
 }
 
 .education ul{
