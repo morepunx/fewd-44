@@ -35,30 +35,30 @@ main {
 	display: flex;
 }
 
-.image {
+.image-wrapper {
 		position: relative;
 }
 
 img {
 	width: 100%;
-
 }
 
 .i-icon {
-	position: relative;
+	position: absolute;
 	color: #fff;
-	font-weight: bold;
-	font-size: 16px; 	border: solid 1px #FFF;
-	padding: 5px;
-	height: 40px;
-	width: 40px;
+  	border-radius: 20px;
+  	border: 3px solid #FFF;
+  	padding: 1px 10px;
+  	font-weight: bold;
+	font-size: 20px; 
+	bottom: 10px;
+	right: 5px;
+	margin: 0;
 }
 
-.i-icon p{
-	position: absolute;
-	text-align: center;
-	margin-bottom: 0px;
-}
+
+
+
 
 .content {
 	flex: 3;
