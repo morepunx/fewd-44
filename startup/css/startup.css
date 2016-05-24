@@ -111,18 +111,20 @@ h1 {
 /*content blocks*/
 .content-block {
 	display: flex;
+	margin: 10px 0px;
 }
 
 .content-block div {
-	padding: 25px;
+	padding: 10px 25px 25px 25px;
 }
 
 .middle-block {
 	border-left: solid 1px #CCC;
 	border-right: solid 1px #CCC;
 }
-.content-block a{
-	background-color: gray;
+.content-block-button {
+	background-color: #CCC;
+	display: block;
 	text-decoration: none;
 	text-align: center;
 	font-size: 14px;
@@ -130,6 +132,10 @@ h1 {
 	font-weight: bold;
 	color: #000;
 	box-shadow: 1px 1px #888888;
+	padding: 10px;
+	width: 95%;
+	margin-top: 20px;
+	border-radius: 3px;
 }
 
 
