@@ -5,8 +5,24 @@ body {
 
 h1 {
 	color: #fff;
+	margin-bottom: 20px;
 }
 
-section {
-	margin: auto;
+.page-container {
+	background-color: #999;
+ 	width: 400px;
+ 	margin: auto;
+}
+
+
+input {
+	height: 50px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+button {
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #ccc;
 }

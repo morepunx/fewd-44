@@ -9,7 +9,33 @@ var compare  = document.querySelector(".compare");
 compare.addEventListener('click',compareNumbers);
 
 
-//EVENT HANDLERS
+
+//Listen for the compare button to be clicked 
+
+
+//compare the first and second number 
+
+
+//Update the page - change the sign 
 function compareNumbers() {
-	sign.textContent = 'Friday';
+
+	var firstValue = firstNumber.value;
+	firstValue = parseInt(firstValue);
+
+	var secondValue = secondNumber.value;
+	secondValue = parseInt(secondValue);
+
+	//comparison if, else if, else
+	if	(firstValue > secondValue)	{
+		sign.textContent = ">";
+	}
+
+	else if	(firstValue < secondValue)	{
+		sign.textContent = "<";
+	}
+	
+	else if (firstValue = secondValue)	{
+		sign.textContent = "=";
+	}
+
 }
