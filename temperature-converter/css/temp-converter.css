@@ -1,0 +1,11 @@
+main {
+	display: flex;
+}
+
+.farenheit {
+	flex: 1;
+}
+
+.celsius {
+	flex: 1;
+}
