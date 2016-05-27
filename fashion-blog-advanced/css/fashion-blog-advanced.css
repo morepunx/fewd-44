@@ -14,7 +14,7 @@ header {
 .title-section {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: center;
 }
 
 
@@ -173,6 +173,7 @@ img {
 
 
 .ad p{
+	font-size: 48px;
 	padding: 50px;
 	min-height: 100px;
 	background-color: #ccc; 
