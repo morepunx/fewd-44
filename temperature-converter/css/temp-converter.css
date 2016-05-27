@@ -1,8 +1,10 @@
 main {
 	display: flex;
+	align-content: flex-start;
+
 }
 
-.farenheit {
+.farenheit-value {
 	flex: 1;
 }
 
