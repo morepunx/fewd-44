@@ -38,7 +38,7 @@ console.log("Running Celsius to farenheit function");
  	console.log("cx is: ", cx);
 
  	//do conversion 
- 	cz = ((cx - 32)*5)/9;
+ 	cz = ((cx*9)/5)+32;
 
  	//update the page 
  	farenheitValue.value = cz;
