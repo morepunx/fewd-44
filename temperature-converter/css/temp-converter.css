@@ -59,6 +59,10 @@ main {
 	margin: 10px 10px;
 }
 
+.rounding {
+	text-align: center;
+}
+
 .round-values {
 	margin-top: 10px;
 	margin-right: 5px;

@@ -51,7 +51,7 @@ function roundAllNumbers() {
 	
 	var isChecked = roundValues.checked;
 
-	// find out of checkbox is checked
+	// find out if checkbox is checked
 	if (isChecked == true) {
 
 	//round all values
@@ -62,6 +62,7 @@ function roundAllNumbers() {
 		celsiusValue.value = roundedCelsius;
 
 	}
+
 }
 
 
