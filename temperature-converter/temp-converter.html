@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Temperature converter</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/temp-converter.css">
 
 </head>
 <body>
+
+<div class="page-container">
 	<header>
 		<p>Temperature converter</p>
 	</header>
@@ -14,14 +17,26 @@
 		<div class="farenheit">
 			<p>Farenheit</p>
 			<input class="farenheit-value" type="text" name="farenheit">
-			<button class="convert-farenheit">Convert</button>
+
 		</div>
+		
+		<div class="buttons">
+			<button class="convert-farenheit">convert »</button>
+			<button class="convert-celsius">« convert</button>
+		</div>
+
 		<div class="celsius">
 			<p>Celsius</p>
 			<input class="celsius-value" type="text" name="celsius">
-			<button class="convert-celsius">Convert</button>
+		
 		</div>
 	</main>
+	<div class="rounding">
+		<input class="round-values" type="checkbox" name="round-values"><label for="round-values">Round all numbers</label>
+	</div>
+
+
+</div>
 
 	<script type="text/javascript" src="js/temp-converter.js"></script>
 

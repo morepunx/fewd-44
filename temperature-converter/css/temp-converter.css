@@ -1,13 +1,64 @@
+
+.page-container {
+ 	width: 370px;
+ 	margin: 20px auto;
+ 	font-family: arial;
+ 
+}
+
+
+header {
+	font-weight: bold;
+	font-family: arial;
+	font-size: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+
+}
+
 main {
 	display: flex;
 	align-content: flex-start;
-
 }
 
 .farenheit-value {
 	flex: 1;
+	height: 50px;
+	padding: 10px;
+	font-size: 24px;
+	width: 100px;
 }
 
-.celsius {
+
+
+.celsius-value{
 	flex: 1;
+	height: 50px;
+	padding: 10px;
+	font-size: 24px;
+	width: 100px;
+
+
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.convert-farenheit {
+	height: 30px;
+	padding: 10px 20px;
+}
+
+.convert-celsius {
+	height: 30px;
+	padding: 10px 20px;
+	margin: 10px 10px;
+}
+
+.round-values {
+	margin-right: 5px;
 }
