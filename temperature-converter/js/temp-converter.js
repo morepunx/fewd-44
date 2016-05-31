@@ -51,9 +51,16 @@ function roundAllNumbers() {
 	
 	var isChecked = roundValues.checked;
 
+	// find out of checkbox is checked
 	if (isChecked == true) {
-		farenheitValue.value = Math.round(farenheitValue);
-		farenheitValue.textContent = farenheitValue.value;
+
+	//round all values
+		roundedFarenheit = Math.round(farenheitValue.value);
+		roundedCelsius = Math.round(celsiusValue.value);
+	//update values 
+		farenheitValue.value = roundedFarenheit;
+		celsiusValue.value = roundedCelsius;
+
 	}
 }
 
