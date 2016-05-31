@@ -7,12 +7,13 @@ var convertFarenheit = document.querySelector(".convert-farenheit");
 var celsiusValue = document.querySelector(".celsius-value");
 var convertCelsius = document.querySelector(".convert-celsius");
 var roundValues = document.querySelector(".round-values");
-var isChecked = roundValues.checked;
+
 
 
 //Events 
 convertFarenheit.addEventListener("click", farenheitToCelsius);
 convertCelsius.addEventListener("click", celsiusToFarenheit);
+roundValues.addEventListener("click", roundAllNumbers);
 
 //Event handeler 
 function farenheitToCelsius() {
@@ -47,8 +48,12 @@ console.log("Running Celsius to farenheit function");
 
 
 function roundAllNumbers() {
-	{
-		console.log("checked?");
+	
+	var isChecked = roundValues.checked;
+
+	if (isChecked == true) {
+		farenheitValue.value = Math.round(farenheitValue);
+		farenheitValue.textContent = farenheitValue.value;
 	}
 }
 
