@@ -50,12 +50,12 @@ main {
 
 .convert-farenheit {
 	height: 30px;
-	padding: 10px 20px;
+	padding: 5px 20px;
 }
 
 .convert-celsius {
 	height: 30px;
-	padding: 10px 20px;
+	padding: 5px 20px;
 	margin: 10px 10px;
 }
 
@@ -67,3 +67,27 @@ main {
 	margin-top: 10px;
 	margin-right: 5px;
 }
+
+/*Mobile phone view */
+@media (max-width: 450px) {
+
+	main {
+	display: flex;
+	align-content: flex-start;
+	flex-direction: column;
+}
+
+.farenheit-value {
+	flex: 1;
+	height: 50px;
+	padding: 10px;
+	font-size: 24px;
+	width: 100px;
+	
+}
+
+
+
+}
+
+
