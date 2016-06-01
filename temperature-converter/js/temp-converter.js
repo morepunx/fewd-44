@@ -24,7 +24,7 @@ function farenheitToCelsius() {
  	console.log("x is: ", x);
 
  	//do conversion 
- 	z = ((x - 32)*5)/9;
+ 	var z = ((x - 32)*5)/9;
 
  	//update the page 
  	celsiusValue.value = z;
@@ -33,17 +33,25 @@ function farenheitToCelsius() {
 
 
 function celsiusToFarenheit() {
-console.log("Running Celsius to farenheit function");
+	console.log("Running Celsius to farenheit function");
+
+	farenheitValue.value = "";
+	
+	if (celsiusValue.value == ""){
+		return;
+		console.log("found garbage");
+
+	}
 
 	//get Celsius value and store it 
 	var cx = parseInt(celsiusValue.value);
  	console.log("cx is: ", cx);
 
  	//do conversion 
- 	cz = ((cx*9)/5)+32;
+ 	var z = ((cx*9)/5)+32;
 
  	//update the page 
- 	farenheitValue.value = cz;
+ 	farenheitValue.value = z;
 }
 
 
