@@ -1,5 +1,5 @@
 // 
-console.log("JS Loaded")
+console.log("JS Loaded");
 
 //Structure 
 var farenheitValue = document.querySelector(".farenheit-value");
