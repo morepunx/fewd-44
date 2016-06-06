@@ -10,6 +10,10 @@
 // Structure
 // ------------------------------------------------
 	var item = document.querySelector(".item");
+	var button = document.querySelector("button");
+	var entries = document.querySelector(".entries");
+	var total = document.querySelector(".total");
+	var totalValue = 0; 
 
 // Setup
 // ------------------------------------------------
@@ -17,21 +21,50 @@
 
 // Events
 // ------------------------------------------------
-	item.addEventListener("keyup", detectEnter);
+	button.addEventListener("click", addItem);
 
 // Event handler functions
-// -----addEventListener-------------------------------------------
+	function addItem(e) {
+		//error validation - return early if blank
 
-	function detectEnter (e) {
-		console.log("running detectEnter");
-		    if (e.keyCode == 13) {
-        console.log("Detecting enter");
-    	}
+		
+		//Prevent default event to submit form
+		e.preventDefault();
+
+		createItem(item.value);
+		calculateTotal(item.value);
+
+		//clean up form
+		item.value = "";
+		}
+
+
+	function calculateTotal(x) {
+		console.log("fn calculateTotal");
+		x = parseFloat(x);
+		console.log(x);	
+
+		totalValue = totalValue + x; 
+		createTotal(totalValue);
 	}
+
 
 // Update page functions
 // ------------------------------------------------
+	function createItem(entry) {
+		console.log("fn createItem");
 
+		var li = document.createElement("li");
+		li.textContent = entry;
+		entries.appendChild(li);
+
+		
+	}
+
+
+	function createTotal(y) {
+		total.textContent = totalValue;
+	}
 	
 // Utility functions
 // ------------------------------------------------

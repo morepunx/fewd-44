@@ -1,0 +1,22 @@
+body {
+	margin: 20px;
+	font-size: 18px;
+	font-family: Arial;
+}
+
+button, input {
+	height: 36px;
+	background-color: none;
+	padding: 0px 10px;
+}
+
+/*Directions*/
+.directions {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.directions li {
+	margin-top: 10px;
+	list-style-type: none;
+}
