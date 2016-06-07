@@ -25,27 +25,46 @@
 
 // Event handler functions
 	function addItem(e) {
-		//error validation - return early if blank
-
 		
 		//Prevent default event to submit form
 		e.preventDefault();
 
-		createItem(item.value);
-		calculateTotal(item.value);
-
-		//clean up form
-		item.value = "";
+		//detect if input is Not a Number
+		if (isNaN(item.value) == true) {
+			console.log("running if for NaN");
+			
+			//clean up form
+			item.value = "";
+			return;
 		}
+
+		//detect if input is empty
+		if (item.value == "") {
+			console.log("running if for empty input");
+			
+			//clean up form
+			item.value = "";
+			return;
+		}
+
+		//run cash register 
+		else {
+			createItem(item.value);
+			calculateTotal(item.value);
+
+			//clean up form
+			item.value = "";
+		}
+
+		
+	}
 
 
 	function calculateTotal(x) {
-		console.log("fn calculateTotal");
-		x = parseFloat(x);
-		console.log(x);	
 
+		x = parseFloat(x);	
 		totalValue = totalValue + x; 
-		createTotal(totalValue);
+		createTotal(totalValue.toFixed(2));
 	}
 
 
@@ -55,15 +74,15 @@
 		console.log("fn createItem");
 
 		var li = document.createElement("li");
-		li.textContent = entry;
+		li.textContent = parseFloat(entry).toFixed(2);
 		entries.appendChild(li);
 
-		
+
 	}
 
 
 	function createTotal(y) {
-		total.textContent = totalValue;
+		total.textContent = y;
 	}
 	
 // Utility functions
