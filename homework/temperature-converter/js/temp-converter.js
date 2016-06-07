@@ -7,8 +7,7 @@ var convertFarenheit = document.querySelector(".convert-farenheit");
 var celsiusValue = document.querySelector(".celsius-value");
 var convertCelsius = document.querySelector(".convert-celsius");
 var roundValues = document.querySelector(".round-values");
-
-
+var isChecked = roundValues.checked;
 
 //Events 
 convertFarenheit.addEventListener("click", farenheitToCelsius);
@@ -19,9 +18,20 @@ roundValues.addEventListener("click", roundAllNumbers);
 function farenheitToCelsius() {
 	console.log("running farenheitToCelsius");
 	
+	if (farenheitValue.value == ""){
+	celsiusValue.value ="";
+	return;
+	console.log("found garbage");
+
+	}
+
+	
+
 	//get farenheit value and store it 
 	var x = parseInt(farenheitValue.value);
  	console.log("x is: ", x);
+
+
 
  	//do conversion 
  	var z = ((x - 32)*5)/9;
@@ -38,6 +48,7 @@ function celsiusToFarenheit() {
 	farenheitValue.value = "";
 	
 	if (celsiusValue.value == ""){
+		farenheitValue.value ="";
 		return;
 		console.log("found garbage");
 
@@ -45,7 +56,7 @@ function celsiusToFarenheit() {
 
 	//get Celsius value and store it 
 	var cx = parseInt(celsiusValue.value);
- 	console.log("cx is: ", cx);
+ 	console.log("cx is: ", cx); 
 
  	//do conversion 
  	var z = ((cx*9)/5)+32;
@@ -63,7 +74,7 @@ function roundAllNumbers() {
 	if (isChecked == true) {
 
 	//round all values
-		roundedFarenheit = Math.round(farenheitValue.value);
+		roundedFarenheit = Math.round(farenheitValue.value);	
 		roundedCelsius = Math.round(celsiusValue.value);
 	//update values 
 		farenheitValue.value = roundedFarenheit;
