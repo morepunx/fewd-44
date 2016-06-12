@@ -1,0 +1,44 @@
+.page-container {
+	font-family: arial;
+	max-width: 800px;
+	margin: auto;
+
+}
+
+
+.title{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 36px;
+}
+
+label {
+	display: block;
+}
+
+
+input {
+	height: 36px;
+}
+
+.task-name {
+	width: 300px;
+}
+
+button{
+	height: 36px;
+	padding: 10px;
+}
+
+.entries {
+	margin-top: 40px;
+}
+
+.task-entry{
+	display: flex;
+}
+
+.task-entry li{
+	margin-right: 20px;
+	margin-top: 20px;
+}

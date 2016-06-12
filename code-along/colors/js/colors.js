@@ -19,43 +19,44 @@ lightsalmon.addEventListener("click", changeThemeLightsalmon);
 darkkhaki.addEventListener("click", changeThemeDarkkhaki);
 greenyellow.addEventListener("click", changeThemeGreenyellow);
 
-
-//FUNCTIONS
+//Event handler functions 
+//-------------------------
 function bodyColorChanger () {
 	body.className = "thistle";
 }
 
 
-function changeThemeHoneydew() {
-	console.log("change theme running");
+function changeThemeHoneydew(event) {
+	console.log(event.target,event.type);
+
 	body.className = "honeydew";
 	currentTheme.textContent= "honeydew";
 }
 
 
-function changeThemeThistle() {
-	console.log("change theme running");
+function changeThemeThistle(event) {
+	console.log(event.target,event.type);
 	body.className = "thistle";
 	currentTheme.textContent= "thistle";
 }
 
 
-function changeThemeLightsalmon() {
-	console.log("change theme running");
+function changeThemeLightsalmon(event) {
+	console.log(event.target,event.type);
 	body.className = "lightsalmon";
 	currentTheme.textContent= "lightsalmon";
 }
 
 
-function changeThemeDarkkhaki() {
-	console.log("change theme running");
+function changeThemeDarkkhaki(event) {
+	console.log(event.target,event.type);
 	body.className = "darkkhaki";
 	currentTheme.textContent= "darkkhaki";
 }
 
 
-function changeThemeGreenyellow() {
-	console.log("change theme running");
+function changeThemeGreenyellow(event) {
+	console.log(event.target,event.type);
 	body.className = "greenyellow";
 	currentTheme.textContent= "greenyellow";
 }

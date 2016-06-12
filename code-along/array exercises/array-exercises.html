@@ -10152,17 +10152,39 @@ var a = [
 
   // 8. How many numbers, whose sum of digits is greater than 10?
 
-  		var sumGreaterTen = [];
 
-  		var sumNotGreaterTen =[];
+ 
+  		var counter =0;
 
-  		n.forEach(sumFinder);
+  		a.forEach(sumFinder);
 
   		function sumFinder(item){
-  			item.toString(); 
 
+  			//setup
+  			var sumOfDigits = 0;
+  		
+
+  			item = item.toString();
+  			var digits = item.split("");
+
+  			var digits = item.toString().split('');
+  			
+  			digits.forEach(addDigits);
+
+  			function addDigits(digit) {
+
+  				digit = parseInt(digit);
+  				sumOfDigits	= sumOfDigits + digit;
+  				
+  			}
+
+  				if (sumOfDigits > 10) {
+  					counter++;
+  				}
+  		
   		}
 
+  		console.log("Numbers with digits added and greater than 10 ", counter);
 
 
 </script>
