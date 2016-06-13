@@ -8,6 +8,7 @@ console.log("JS loaded");
 	var entries = document.querySelector(".entries");
 
 
+
 // Setup
 // ------------------------------------------------
 
@@ -30,15 +31,28 @@ console.log("JS loaded");
 		e.preventDefault();
 		console.log("fn addTask")
 
+		//Create Ul and add it to div 
 		var  ul = document.createElement("ul");
 		ul.className = "task-entry";
 		entries.appendChild(ul);
 
+		//create checkbox 
+		var inputCheckbox = document.createElement("input");
+		inputCheckbox.type = "checkbox";
+	
+
+		//Create checkbox, task name, and date LIs
+		var checkboxLi = document.createElement("li");
 		var taskNameLi = document.createElement("li");
 		var dateLi	= document.createElement("li");
 
+		//Update li contet 
 		taskNameLi.textContent = taskName.value;
 		dateLi.textContent = date.value;
+
+		//update the page with li content
+		ul.appendChild(checkboxLi);
+		checkboxLi.appendChild(inputCheckbox);
 
 		ul.appendChild(taskNameLi);
 		ul.appendChild(dateLi);

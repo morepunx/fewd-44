@@ -13,12 +13,13 @@
 }
 
 label {
-	display: block;
+	margin-bottom: 5px;
 }
 
 
 input {
 	height: 36px;
+	padding: 10px;
 }
 
 .task-name {
@@ -31,14 +32,21 @@ button{
 }
 
 .entries {
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 .task-entry{
 	display: flex;
+	background-color: #ccc;
+	margin-top: 5px;
+	height: 36px;
+	align-items: center;
 }
 
 .task-entry li{
-	margin-right: 20px;
-	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.task-entry input {
+	padding: 0px;
 }
