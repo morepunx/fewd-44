@@ -6,25 +6,28 @@ console.log("JS loaded");
 	var date = document.querySelector(".date");
 	var button = document.querySelector(".button");
 	var entries = document.querySelector(".entries");
-	var completedTasks = [];
 
 
 // Events
 // ------------------------------------------------
-	button.addEventListener("click", addTask);
+	button.addEventListener("click", submitTask);
 
 
 // Event handler functions
 //-------------------------------------------------
-	function addTask(e) {
-
+	function submitTask(e) {
 		e.preventDefault();
-		console.log("fn addTask")
+		console.log("fn submitTask")
+
+		createTask();
+	}
+
+	function createTask() {
 
 		//Create Ul and add it to div 
 		var  ul = document.createElement("ul");
 		ul.className = "task-entry";
-		entries.appendChild(ul);
+		
 
 		//create checkbox 
 		var inputCheckbox = document.createElement("input");
@@ -36,27 +39,31 @@ console.log("JS loaded");
 		var taskNameLi = document.createElement("li");
 		var dateLi	= document.createElement("li");
 
-		
 
 		//Update li contet 
-		taskNameLi.textContent = taskName.value;
-		dateLi.textContent = date.value;
+		taskNameLi.textContent = taskName.value ;
+		dateLi.textContent = "(" + date.value + ")";
 
 		//update the page with li content
+		entries.appendChild(ul);
 		ul.appendChild(checkboxLi);
 		checkboxLi.appendChild(inputCheckbox);
 	
 		ul.appendChild(taskNameLi);
 		ul.appendChild(dateLi);
 
-		taskCheckbox = document.querySelector(".task-checkbox");
-		taskCheckbox.addEventListener("click",completeTask);
+		var taskCheckbox = inputCheckbox;
+		taskCheckbox.addEventListener("click", function (e) {
+			completeTask(e, taskCheckbox);
+		});
+
+
 	}
 
-	function completeTask(e) {
+	function completeTask(e, taskCheckbox) {
 
 		console.log("fn completeTask");
-		taskCheckbox.addEventListener("click",completeTask);
+
 
 		var isChecked = taskCheckbox.checked; 
 
