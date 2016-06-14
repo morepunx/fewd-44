@@ -12,6 +12,26 @@
 	font-size: 36px;
 }
 
+form {
+	display: flex;
+	align-items: flex-end;
+
+}
+
+.task-div{
+	display: flex;
+	flex-direction: column;
+	margin-right: 10px;
+	width: 50%;
+}
+
+.date-div{
+	display: flex;
+	flex-direction: column;
+	margin-right: 10px;
+}
+
+
 label {
 	margin-bottom: 5px;
 }
@@ -23,7 +43,7 @@ input {
 }
 
 .task-name {
-	width: 300px;
+	width: 100%;
 }
 
 button{
@@ -48,5 +68,25 @@ button{
 }
 
 .task-entry input {
+	padding: 0px;
+}
+
+.completed-task-entry{
+	display: flex;
+	background-color: #ccc;
+	margin-top: 5px;
+	height: 36px;
+	align-items: center;
+}
+
+.completed-task-entry li{
+	margin-left: 20px;
+}
+
+.completed-task-entry li:first-of-type + li{
+	text-decoration: line-through;
+}
+
+.completed-task-entry input {
 	padding: 0px;
 }
