@@ -19,6 +19,11 @@ console.log("JS loaded");
 		e.preventDefault();
 		console.log("fn submitTask")
 
+		if (taskName.value == ""){
+			return;
+		}
+
+
 		createTask();
 	}
 
