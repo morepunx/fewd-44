@@ -47,7 +47,7 @@ console.log("JS loaded");
 
 		//Update li contet 
 		taskNameLi.textContent = taskName.value ;
-		dateLi.textContent = "(" + date.value + ")";
+		dateLi.textContent = date.value;
 
 		//update the page with li content
 		entries.appendChild(ul);
