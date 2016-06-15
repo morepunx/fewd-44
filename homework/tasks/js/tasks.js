@@ -59,8 +59,6 @@ console.log("JS loaded");
 
 		var taskCheckbox = inputCheckbox;
 		taskCheckbox.addEventListener("click", completeTask);
-
-
 	}
 
 	function completeTask(e) {
