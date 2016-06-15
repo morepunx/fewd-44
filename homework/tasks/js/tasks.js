@@ -58,27 +58,25 @@ console.log("JS loaded");
 		ul.appendChild(dateLi);
 
 		var taskCheckbox = inputCheckbox;
-		taskCheckbox.addEventListener("click", function (e) {
-			completeTask(e, taskCheckbox);
-		});
+		taskCheckbox.addEventListener("click", completeTask);
 
 
 	}
 
-	function completeTask(e, taskCheckbox) {
+	function completeTask(e) {
 
 		console.log("fn completeTask");
 
+		var checkbox = e.target;
+		var li = checkbox.parentNode.parentNode;
 
-		var isChecked = taskCheckbox.checked; 
+		var isChecked = checkbox.checked; 
 
 		if (isChecked == true) {
-			console.log(e.target.parentNode.parentNode);
-			e.target.parentNode.parentNode.className = "completed-task-entry";
-		}
-
-		if (isChecked == false) {
-			e.target.parentNode.parentNode.className = "task-entry";
+			console.log(li);
+			li.className = "completed-task-entry";
+		} else {
+			li.className = "task-entry";
 		}
 
 	}
