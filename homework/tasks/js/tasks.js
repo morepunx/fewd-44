@@ -1,4 +1,4 @@
-console.log("JS loaded");
+vconsole.log("JS loaded");
 
 // Structure
 // ------------------------------------------------

@@ -1,0 +1,73 @@
+.page-container {
+	display: flex;
+}
+
+.button-group {
+	margin-left: 20%;
+	margin-top: 50px;
+}
+
+.button-group li{
+	margin-top: 100px;
+}
+
+.button-group li:first-child {
+	margin-top: 0px;
+}
+
+button {
+	height: 36px;
+	width: 100px;
+}
+
+.stoplight {
+	height: 400px;
+	width: 200px;
+	background-color: #333;
+	border-radius: 25px;
+	margin: auto;
+	position: relative;
+}
+
+
+.red-off {
+	border-radius: 50%;
+	background-color: black;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 25px;
+	left: 50px;
+}
+
+.red-on {
+	border-radius: 50%;
+	background-color: red;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 25px;
+	left: 50px;
+}
+
+
+
+.yellow-off {
+	border-radius: 50%;
+	background-color: black;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 150px;
+	left: 50px;
+}
+
+.green-off {
+	border-radius: 50%;
+	background-color: black;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	bottom: 25px;
+	left: 50px;
+}

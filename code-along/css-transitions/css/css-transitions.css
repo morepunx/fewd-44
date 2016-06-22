@@ -1,0 +1,71 @@
+div {
+	transition-property: all;
+	transition-duration: 2s;
+	transition-timing-function: ease; 
+
+	/*Shorthand: transition: all 2s ease;*/
+}
+
+
+section {
+	line-height: 50px;
+	width: 100px;
+	background-color: thistle;
+	text-align: center;
+}
+
+.wheel {
+	width: 150px;
+	height: 150px;
+	transition: all 3s cubic-bezier(0, 0, 0.58, 1);
+
+}
+
+.wheel img {
+	width: 100%;
+}
+
+.cover {
+	transition: all 3s ease;
+}
+
+.spin{
+	transform: translateX(400px);
+}
+
+.spin .wheel {
+	transform: rotate(1440deg);
+	transform-origin: 50% 50%;
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background: #936C71;
+}
+
+.circle {
+	width: 150px;
+	height: 150px;
+	background-color: #889268;
+	border-radius: 50%;
+}
+
+.green {
+	background-color: #889268;
+}
+
+.oval {
+	border-radius: 10%;
+	background-color: purple;
+}
+
+
+
+.close {
+	transform: translateY(-110px);
+}
+
+.blog-container {
+	overflow: hidden;
+}
