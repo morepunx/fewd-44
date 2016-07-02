@@ -1,0 +1,22 @@
+body {
+	background: bisque;
+	font-family: Arial;
+	margin: 15px;
+	font-size: 20px;
+}
+
+h1 {
+	margin: 15px 0;
+}
+
+input {
+	padding: 10px;
+	font-size: 20px;
+	width: 300px;
+}
+
+.results li{
+	border-bottom: solid 1px gray;
+	padding: 15px;
+}
+

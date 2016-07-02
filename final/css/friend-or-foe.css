@@ -1,0 +1,236 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-image: url(../img/sun.jpg);
+	background-size: cover;
+}
+
+.page-container {
+	position: absolute;
+	width: 100%;
+	font-family: 'Abel', sans-serif;
+	background-color: rgba(0,0,0,.5);
+	height: 100%;
+	color: #fff;
+	display: flex;
+}
+
+.game-area {
+	flex: 3;
+	min-width: 400px;
+	text-align: center;
+	padding: 0 40px 40px 40px;
+
+}
+
+.header {
+	display: flex;
+	padding: 10px 10px 10px 0;
+}
+
+
+
+.thing-section {
+	border-top: solid 1px #fff;
+}
+
+
+
+.title {
+	font-size: 32px;
+	font-family: 'Abel', sans-serif;
+}
+
+.thing-name {
+	margin-top: 20px;
+	font-size: 72px;
+}
+
+.thing-description {
+	font-size: 24px;
+}
+
+button {
+	height: 36px;
+	width: 36px;
+	background-color: #fff;
+	border: none;
+}
+
+.utility-links {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.utility-links li{
+	border-right: solid 1px #fff;
+	margin-right: 10px;
+	padding-right: 10px;
+}
+
+.utility-links li:last-child {
+	border-right: none;
+}
+
+.timer-section {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.timer {
+	font-size: 32px;
+}
+
+.play img{
+	height: 50%;
+}
+
+.make-final-determination {
+	margin-top: 40px;
+	font-size: 24px;
+}
+
+.friend-button {
+	height: 60px;
+	width: 200px;
+	color: white;
+	background-color: darkseagreen;
+	font-family: 'Coiny', cursive;
+	font-size: 32px;
+}
+
+.foe-button {
+	height: 60px;
+	width: 200px;
+	color: white;
+	background-color: firebrick;
+	font-family: 'Creepster', cursive;
+	font-size: 32px;
+}
+
+.judgment-area{
+	display: flex;
+	margin-top: 60px;
+	justify-content: center;
+}
+
+
+.pro-section {
+	margin-right: 60px;
+}
+
+.pro-section p{
+	font-size: 32px;
+}
+
+.pro-list {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.pro-list li {
+	text-align: left;
+	list-style: decimal;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.con-section p{
+	font-size: 32px;
+}
+
+.con-list {
+	padding: 20px;
+}
+
+.con-list li{
+	text-align: left;
+	list-style: decimal;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+
+
+/*Styling for input fields in pro and con list */
+
+input {
+	  font-size:16px;
+	  padding:10px 10px 10px 5px;
+	  display:block;
+	  width:300px;
+	  border:none;
+	  border-bottom:1px solid #FFF;
+	  background: transparent;
+	  color: #fff;
+}
+
+input:focus { 
+	  outline:none; 
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+.final-determination-area {
+	width: 300px;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.4)
+}
+
+.pedestal-section {
+	height: 50%;
+}
+
+.pedestal-section p{
+
+}
+
+.pedestal-section li{
+	color: black;
+	background-color: #fff;
+	height: 36px;
+	padding: 10px;
+	margin-top: 5px;
+}
+
+.hate-pit-section {
+	height: 50%;
+}
+
+.hate-pit-section li{
+	color: black;
+	background-color: #fff;
+	height: 36px;
+	padding: 10px;
+	margin-top: 5px;
+}
