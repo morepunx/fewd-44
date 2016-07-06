@@ -4,7 +4,7 @@ html {
 
 body {
 	height: 100%;
-	background-image: url(../img/sun.jpg);
+	background-image: url(../);
 	background-size: cover;
 }
 
@@ -53,12 +53,6 @@ body {
 	font-size: 24px;
 }
 
-button {
-	height: 36px;
-	width: 36px;
-	background-color: #fff;
-	border: none;
-}
 
 .utility-links {
 	margin-top: 10px;
@@ -72,19 +66,52 @@ button {
 	padding-right: 10px;
 }
 
+.utility-links a{
+	color: white;
+}
+
 .utility-links li:last-child {
 	border-right: none;
 }
 
-.timer-section {
-	margin-top: 40px;
-	display: flex;
-	justify-content: center;
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
 }
 
-.timer {
-	font-size: 32px;
+/* Modal Content/Box */
+.modal-content {
+    background-color: #333;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
 }
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .play img{
 	height: 50%;
@@ -102,6 +129,7 @@ button {
 	background-color: darkseagreen;
 	font-family: 'Coiny', cursive;
 	font-size: 32px;
+	border: none;
 }
 
 .foe-button {
@@ -111,6 +139,7 @@ button {
 	background-color: firebrick;
 	font-family: 'Creepster', cursive;
 	font-size: 32px;
+	border: none;
 }
 
 .judgment-area{
@@ -159,20 +188,41 @@ button {
 
 
 /*Styling for input fields in pro and con list */
+/* form starting stylings ------------------------------- */
+.group 			  { 
+  position:relative; 
+}
+input 				{
+  font-size:18px;
+  color: white;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  background-color: transparent;
+  border-bottom:1px solid white;
+}
+input:focus 		{ outline:none; }
 
-input {
-	  font-size:16px;
-	  padding:10px 10px 10px 5px;
-	  display:block;
-	  width:300px;
-	  border:none;
-	  border-bottom:1px solid #FFF;
-	  background: transparent;
-	  color: #fff;
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
 }
 
-input:focus { 
-	  outline:none; 
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:white;
 }
 
 /* BOTTOM BARS ================================= */
@@ -187,7 +237,6 @@ input:focus {
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
-
 }
 .bar:before {
   left:50%;
@@ -201,10 +250,43 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
 }
 
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+
 .final-determination-area {
 	width: 300px;
 	padding: 10px;
-	background-color: rgba(0,0,0,0.4)
+	background-color: rgba(0,0,0,0.7)
 }
 
 .pedestal-section {
@@ -215,12 +297,29 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 
 }
 
-.pedestal-section li{
-	color: black;
-	background-color: #fff;
-	height: 36px;
-	padding: 10px;
+
+
+.pedestal-list{
+
+}
+
+.pedestal-list li{
+	color: white;
+	font-family: 'Coiny', cursive;;
+	background-color: darkseagreen;
+	height: 40px;
+	padding: 10px 10px 10px 10px;
 	margin-top: 5px;
+	width: 100%;
+	display: flex;
+	line-height: 20px;
+	justify-content: space-between;
+}
+
+.fa-ellipsis-v{
+	border-left: solid 1px white;
+	padding-left: 10px;
+	padding-top: 2px;
 }
 
 .hate-pit-section {
@@ -228,9 +327,62 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 }
 
 .hate-pit-section li{
-	color: black;
-	background-color: #fff;
+	color: white;
+	background-color: firebrick;
+	font-family: 'Creepster', cursive;
+	letter-spacing: 2px;
 	height: 36px;
 	padding: 10px;
 	margin-top: 5px;
+	display: flex;
+	justify-content: space-between;
 }
+
+/*Dropdowns for ellipsis*/
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: -136px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+
+
+
+footer {
+	position: absolute;
+	bottom: 20px;
+
+}
+

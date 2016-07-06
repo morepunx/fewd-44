@@ -19,15 +19,54 @@
 			<div class="thing-section">
 
 				<ul>
-					<li class="thing-name">the sun</li>
-					<li class="thing-description">The star we orbit around on planet earth</li> 
+					<li class="thing-name"></li>
+					<li class="thing-description"></li> 
 				</ul>
 
 				<ul class="utility-links">
-					<li>I'm dumb, what's this thing?</li>
-					<li>Judge a different thing</li>
-					<li>Make my own thing</li>
+					<li><a class="more-info" href="#">I'm dumb, what's this thing?</a></li>
+					<li><a class="different-thing" href="#">Judge a different thing</a></li>
+					<li><a class="make-own" href="#">Make my own thing</a></li>
 				</ul>
+
+			</div>
+
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+
+			  <!-- Modal content -->
+			  <div class="modal-content">
+			    <span class="close">x</span>
+			    <p>Make your own thing to judge</p>
+			    <form>
+	    			<div class="group">      
+					      <input class="newThingName" type="text" required>
+					      <span class="highlight"></span>
+					      <span class="bar"></span>
+					      <label>Name for thing</label>
+				    </div>
+				    <div class="group">      
+					      <input class="newThingDescription" type="text" required>
+					      <span class="highlight"></span>
+					      <span class="bar"></span>
+					      <label>Description</label>
+				    </div>
+			    	<div class="group">      
+					      <input class="newThingImageURL" type="text" required>
+					      <span class="highlight"></span>
+					      <span class="bar"></span>
+					      <label>Paste an image URL</label>
+				    </div>
+				    <div class="group">      
+					      <input class="newThingURL" type="text" required>
+					      <span class="highlight"></span>
+					      <span class="bar"></span>
+					      <label>Paste URL to more info</label>
+				    </div>
+
+
+			    </form>
+			  </div>
 
 			</div>
 
@@ -41,7 +80,12 @@
 					<div class="pro-section">
 						<p>Pro</p>
 						<form class="pro-form">
-							<input class="pro-input" type="text">
+							<div class="group">      
+							      <input class="pro-input" type="text" required>
+							      <span class="highlight"></span>
+							      <span class="bar"></span>
+							      <label>Add a pro</label>
+						    </div>
 								<!-- <i class="fa fa-check" aria-hidden="true"></i> -->
 						</form>	
 						<ol class="pro-list">
@@ -51,7 +95,12 @@
 					<div class="con-section">
 						<p>Con</p>
 						<form class="con-form">
-							<input class="con-input" type="text">
+							<div class="group">      
+							      <input class="con-input" type="text" required>
+							      <span class="highlight"></span>
+							      <span class="bar"></span>
+							      <label>Add a con</label>
+						    </div>
 								<!-- <i class="fa fa-check" aria-hidden="true"></i> -->
 						</form>	
 						<ol class="con-list">
@@ -65,20 +114,23 @@
 				<button class="friend-button">Friend</button>	
 				<button class="foe-button">Foe</button>
 			</div>
+
+			<footer>
+				<p>© Copyright Killian Escobedo. All rights reserved.</p>
+			</footer>
+
 		</div>
 
 		<div class="final-determination-area">
 			<div class="pedestal-section">	
 				<p class="title">Glory pedestal</p>
 				<ul class="pedestal-list">
-					<li>cookies</li>
 				</ul>
 			</div>
 
 			<div class="hate-pit-section">
 				<p class="title">Hate pit</p>
-				<ul class="hate-pit">
-					<li>cigarettes</li>
+				<ul class="hate-pit-list">
 				</ul>
 			</div>
 		</div>
