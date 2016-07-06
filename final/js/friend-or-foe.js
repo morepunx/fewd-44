@@ -37,6 +37,7 @@ friendButton.addEventListener("click",sendToGlory);
 foeButton.addEventListener("click",sendToHatePit);
 makeOwn.addEventListener("click",openModal);
 closeIt.addEventListener("click",closeModal);
+differentThing.addEventListener("click", loadThing)
 
 
 
@@ -66,6 +67,7 @@ function pullFromHatePit(){
 	hatePit = JSON.parse(localStorage.getItem('hatePit'));
 	hatePit.forEach(loadHatePit);
 }
+
 
 //opens modal for adding own thing 
 function openModal(){
@@ -123,7 +125,6 @@ function loadThing() {
 
 	thing.pros.forEach(loadPros);
 	thing.cons.forEach(loadCons);
-	
 }
 
 
@@ -146,6 +147,7 @@ function loadGloryPedestal(thing) {
 	//create li
 	li = document.createElement("li");
 	li.textContent = thing.name;
+	li.classList = thing.name;
 	pedestalList.appendChild(li);
 
 	//add dropdown
@@ -188,6 +190,7 @@ function loadHatePit(thing) {
 	//create li
 	li = document.createElement("li");
 	li.textContent = thing.name;
+	li.classList = thing.name;
 	hatePitList.appendChild(li);
 
 	//add dropdown
@@ -251,9 +254,18 @@ function buildConList(){
 function sendToGlory(){
 	console.log("fn send to glory");  
 	thingToLoad.friend_status = true;
+	
+
+
 	gloryPedestal.push(thingToLoad);
 
+
+
 	localStorage.setItem('gloryPedestal', JSON.stringify(gloryPedestal));
+
+
+
+
 	buildGloryPedestal();
 	loadThing();
 }
@@ -275,6 +287,7 @@ function buildGloryPedestal() {
 	//create li
 	li = document.createElement("li");
 	li.textContent = thingToLoad.name;
+	li.classList = thingToLoad.name;
 	pedestalList.appendChild(li);
 
 	//add dropdown
@@ -318,6 +331,7 @@ function buildHatePit(){
 	//create li
 	li = document.createElement("li");
 	li.textContent = thingToLoad.name;
+	li.classList = thingToLoad.name;
 	hatePitList.appendChild(li);
 
 	//add dropdown
@@ -357,8 +371,22 @@ function buildHatePit(){
 
 
 function restartThing(e){
-	console.log("fn restartThing", e.target);
+	console.log("fn restartThing", e.target.parentNode.parentNode.parentNode.classList.value);
+	var target = e.target.parentNode.parentNode.parentNode.classList.value;
+
+	hatePit.forEach(identifyThingToRestart);
+
+	function identifyThingToRestart(thing){
+
+	if (target == thing.name){
+		console.log("yippie",thing);
+	}
+
 }
+
+
+}
+
 
 function removeThing(){
 	console.log("fn removeThing");
