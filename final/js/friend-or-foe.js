@@ -116,6 +116,26 @@ function loadThing() {
 
 	//decide what thing to load
 	thingToLoad = json.thing[Math.floor(Math.random() * json.thing.length)];
+	
+	hatePit.forEach(checkIfInHatePit);
+
+	function checkIfInHatePit(thing){
+
+		if (thingToLoad.name == thing.name) {
+			loadThing();
+		}
+	}
+
+	gloryPedestal.forEach(checkIfInGloryPedestal);
+	function checkIfInGloryPedestal(thing){
+
+		if (thingToLoad.name == thing.name) {
+			loadThing();
+		}
+	}
+
+
+
 	var thing = thingToLoad;
 
 	thingName.textContent= thing.name;
@@ -123,8 +143,33 @@ function loadThing() {
 	body.style.backgroundImage = thing.image_url;
 	moreInfo.setAttribute("href", thing.more_info_url);
 
+	proList.innerHTML = "";
+	conList.innerHTML = "";
+
 	thing.pros.forEach(loadPros);
 	thing.cons.forEach(loadCons);
+	proInput.value = "";
+	conInput.value = "";
+
+}
+
+function loadSpecificThing(thing) {
+	console.log("fn load loadSpecificThing");
+
+	thingName.textContent = thing.name;
+	thingDescription.textContent= thing.description;
+	body.style.backgroundImage = thing.image_url;
+	moreInfo.setAttribute("href", thing.more_info_url);
+
+	proList.innerHTML = "";
+	conList.innerHTML = "";
+
+	thing.pros.forEach(loadPros);
+	thing.cons.forEach(loadCons);
+
+	proInput.value = "";
+	conInput.value = "";
+	
 }
 
 
@@ -133,6 +178,7 @@ function loadPros(proItem) {
 	li = document.createElement("li");
 	li.textContent = proItem;
 	proList.appendChild(li);
+
 }
 
 //Loads any cons stored in the array
@@ -140,6 +186,7 @@ function loadCons(conItem){
 	li = document.createElement("li");
 	li.textContent = conItem;
 	conList.appendChild(li);
+
 }
 
 function loadGloryPedestal(thing) {
@@ -254,20 +301,21 @@ function buildConList(){
 function sendToGlory(){
 	console.log("fn send to glory");  
 	thingToLoad.friend_status = true;
-	
-
 
 	gloryPedestal.push(thingToLoad);
 
-
-
 	localStorage.setItem('gloryPedestal', JSON.stringify(gloryPedestal));
 
-
-
+	proInput.value = "";
+	conInput.value = "";
+	proList.innerHTML = "";
+	conList.innerHTML = "";
+	//proList.textContent = "";
+	//conList.textContent = "";
 
 	buildGloryPedestal();
 	loadThing();
+
 }
 
 function sendToHatePit() {
@@ -276,8 +324,17 @@ function sendToHatePit() {
 	hatePit.push(thingToLoad);
 
 	localStorage.setItem("hatePit", JSON.stringify(hatePit));
+
+	proInput.value = "";
+	conInput.value = "";
+	proList.innerHTML = "";
+	conList.innerHTML = "";
+	//proList.textContent = "";
+	//conList.textContent = "";
+
 	buildHatePit();
 	loadThing();
+
 }
 
 //build glory list 
@@ -371,25 +428,38 @@ function buildHatePit(){
 
 
 function restartThing(e){
-	console.log("fn restartThing", e.target.parentNode.parentNode.parentNode.classList.value);
+	console.log("Coming soon");
+
+}
+
+
+function removeThing(e){
+	console.log("fn removeThing");
+	console.log("fn removeThing", e.target.parentNode.parentNode.parentNode.parentNode.classList.value);
 	var target = e.target.parentNode.parentNode.parentNode.classList.value;
 
-	hatePit.forEach(identifyThingToRestart);
+	
+	hatePit.forEach(identifyThingToRemove);
 
-	function identifyThingToRestart(thing){
+	function identifyThingToRemove(thing){
 
-	if (target == thing.name){
-		console.log("yippie",thing);
+		if (target == thing.name){
+			console.log("yippie",thing);
+
+			friend_status = false;
+			foe_status = false;
+
+			hatePit.pop(thing);
+			localStorage.setItem("hatePit", JSON.stringify(hatePit));
+			
+			hatePitList.innerHTML = "";
+			pullFromHatePit();
+		}  
+
+
+
+
 	}
-
-}
-
-
-}
-
-
-function removeThing(){
-	console.log("fn removeThing");
 }
 
 
