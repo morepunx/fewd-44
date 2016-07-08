@@ -112,5 +112,5 @@ var json = {
 
 
 var json = {
-	"thing": [cigarettes,sun,cookies,swimmingPool,babies,puppies,cars,airplanes,champagne]
+	"thing": [cigarettes,sun,cookies,swimmingPool,babies,puppies,cars,airplanes,champagne,json]
 };
