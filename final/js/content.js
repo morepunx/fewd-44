@@ -99,7 +99,7 @@ var champagne = {
 }
 
 var json = {
-	"name": "JSON",
+	"name": "json",
 	"description": "Un-understandable meaninglessness",
 	"image_url": "url(img/json.png)",
 	"more_info_url": "https://en.wikipedia.org/wiki/JSON",
@@ -109,8 +109,18 @@ var json = {
 	foe_status: false
 }
 
+var fewd44 = {
+	"name": "fewd44",
+	"description": "HTML, CSS, and javascript orgy",
+	"image_url": "url(img/fewd44.png)",
+	"more_info_url": "http://timmmichaud.github.io/fewd-44/",
+	pros: [],
+	cons: [],
+	friend_status: false,
+	foe_status: false
+}
 
 
 var json = {
-	"thing": [cigarettes,sun,cookies,swimmingPool,babies,puppies,cars,airplanes,champagne,json]
+	"thing": [cigarettes,sun,cookies,swimmingPool,babies,puppies,cars,airplanes,champagne,json,fewd44]
 };
