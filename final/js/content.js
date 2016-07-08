@@ -88,11 +88,21 @@ var airplanes = {
 }
 
 var champagne = {
-	
-	"name": "airplanes",
+	"name": "champagne",
 	"description": "bubble juice that makes you happy",
 	"image_url": "url(img/champagne.jpg)",
 	"more_info_url": "https://en.wikipedia.org/wiki/Champagne",
+	pros: [],
+	cons: [],
+	friend_status: false,
+	foe_status: false
+}
+
+var json = {
+	"name": "JSON",
+	"description": "Un-understandable meaninglessness",
+	"image_url": "url(img/json.png)",
+	"more_info_url": "https://en.wikipedia.org/wiki/JSON",
 	pros: [],
 	cons: [],
 	friend_status: false,
