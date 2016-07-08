@@ -437,29 +437,56 @@ function removeThing(e){
 	console.log("fn removeThing");
 	console.log("fn removeThing", e.target.parentNode.parentNode.parentNode.parentNode.classList.value);
 	var target = e.target.parentNode.parentNode.parentNode.classList.value;
+	var whichList = e.target.parentNode.parentNode.parentNode.parentNode.classList.value;
 
-	
-	hatePit.forEach(identifyThingToRemove);
+	if (whichList = "hate-pit-list") {
 
-	function identifyThingToRemove(thing){
+		hatePit.forEach(identifyThingToRemove);
 
-		if (target == thing.name){
-			console.log("yippie",thing);
+		function identifyThingToRemove(thing){
 
-			friend_status = false;
-			foe_status = false;
+			if (target == thing.name){
+				console.log("yippie",thing);
 
-			hatePit.pop(thing);
-			localStorage.setItem("hatePit", JSON.stringify(hatePit));
-			
-			hatePitList.innerHTML = "";
-			pullFromHatePit();
-		}  
+				friend_status = false;
+				foe_status = false;
 
+				hatePit.pop(thing);
+				localStorage.setItem("hatePit", JSON.stringify(hatePit));
+				
+				hatePitList.innerHTML = "";
+				pullFromHatePit();
+			}  
 
+		}
+	}
 
+	if (whichList = "pedestal-list") {
+
+		gloryPedestal.forEach(identifyFriendToRemove);
+
+		function identifyFriendToRemove(thing){
+
+			if (target == thing.name){
+				console.log("fn identifyFriendToRemove");
+
+				friend_status = false;
+				foe_status = false;
+
+				gloryPedestal.pop(thing);
+				localStorage.setItem("gloryPedestal", JSON.stringify(gloryPedestal));
+				
+				pedestalList.innerHTML = "";
+				pullFromGloryPedestal();
+			}  
+
+		}
 
 	}
+
+
+
+
 }
 
 
