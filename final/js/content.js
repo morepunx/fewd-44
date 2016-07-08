@@ -87,8 +87,20 @@ var airplanes = {
 	foe_status: false
 }
 
+var champagne = {
+	
+	"name": "airplanes",
+	"description": "bubble juice that makes you happy",
+	"image_url": "url(img/champagne.jpg)",
+	"more_info_url": "https://en.wikipedia.org/wiki/Champagne",
+	pros: [],
+	cons: [],
+	friend_status: false,
+	foe_status: false
+}
+
 
 
 var json = {
-	"thing": [cigarettes,sun,cookies,swimmingPool,babies,puppies,cars,airplanes]
+	"thing": [cigarettes,sun,cookies,swimmingPool,babies,puppies,cars,airplanes,champagne]
 };
